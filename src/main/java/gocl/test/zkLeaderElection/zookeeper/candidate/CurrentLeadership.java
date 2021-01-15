@@ -17,6 +17,12 @@ public class CurrentLeadership implements Candidate {
 
     private Context leaderCtx;
 
+    private final String ID;
+
+    public CurrentLeadership() {
+        ID = UUID.randomUUID().toString();
+    }
+
     @Override
     public String getRole() {
         return this.leadershipRole;
@@ -24,19 +30,19 @@ public class CurrentLeadership implements Candidate {
 
     @Override
     public String getId() {
-        return UUID.randomUUID().toString();
+        return ID;
     }
 
     @Override
     public void onGranted(Context ctx) throws InterruptedException {
         this.leaderCtx = ctx;
-        log.info(" {} leadership granted ", this.getId());
+        log.debug(" {} leadership granted ", this.getId());
     }
 
     @Override
     public void onRevoked(Context ctx) {
         this.leaderCtx = null;
-        log.info(" {} leadership revoked ", this.getId());
+        log.debug(" {} leadership revoked ", this.getId());
     }
 
     public boolean isLeader() {
