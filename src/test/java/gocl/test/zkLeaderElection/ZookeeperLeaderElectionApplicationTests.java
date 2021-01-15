@@ -9,7 +9,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import java.io.*;
 import java.net.Socket;
@@ -59,16 +58,17 @@ class ZookeeperLeaderElectionApplicationTests extends AbstractIntegrationTest {
 
 	@Test
 	public void uniqueLeaderTest() throws Exception {
-		CurrentLeadership leadTwo = createInstance();
-		CurrentLeadership leadThree = createInstance();
+		CurrentLeadership leadTwo = createInstance("server.port=8081");
+		CurrentLeadership leadThree = createInstance("server.port=8082");
 
 		// validate only one leader
 		Assertions.assertTrue(leadOne.isLeader() ^ leadTwo.isLeader() ^ leadThree.isLeader(),
 			"There is more than one leader");
 	}
 
-	private CurrentLeadership createInstance() {
-		SpringApplicationBuilder instance = new SpringApplicationBuilder(ZookeeperLeaderElectionApplication.class);
+	private CurrentLeadership createInstance(String properties) {
+		SpringApplicationBuilder instance = new SpringApplicationBuilder(ZookeeperLeaderElectionApplication.class)
+				.properties(properties);
 		instance.run();
 		return instance.context().getBean(CurrentLeadership.class);
 	}
