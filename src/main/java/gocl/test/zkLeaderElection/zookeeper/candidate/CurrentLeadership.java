@@ -17,6 +17,12 @@ public class CurrentLeadership implements Candidate {
 
     private Context leaderCtx;
 
+    private final String ID;
+
+    public CurrentLeadership() {
+        ID = UUID.randomUUID().toString();
+    }
+
     @Override
     public String getRole() {
         return this.leadershipRole;
@@ -24,8 +30,7 @@ public class CurrentLeadership implements Candidate {
 
     @Override
     public String getId() {
-        // TODO: Is looks ok to generate random ID, but probably better to store it as long as application lives
-        return UUID.randomUUID().toString();
+        return ID;
     }
 
     @Override
@@ -33,13 +38,13 @@ public class CurrentLeadership implements Candidate {
         // TODO: If there will be some extra time, it could be nice to keep synchronized the
         //  onGranted, onRevoked and isLeader functions
         this.leaderCtx = ctx;
-        log.info(" {} leadership granted ", this.getId());
+        log.debug(" {} leadership granted ", this.getId());
     }
 
     @Override
     public void onRevoked(Context ctx) {
         this.leaderCtx = null;
-        log.info(" {} leadership revoked ", this.getId());
+        log.debug(" {} leadership revoked ", this.getId());
     }
 
     // TODO: May we check for different roles here?
