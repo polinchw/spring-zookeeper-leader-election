@@ -24,11 +24,14 @@ public class CurrentLeadership implements Candidate {
 
     @Override
     public String getId() {
+        // TODO: Is looks ok to generate random ID, but probably better to store it as long as application lives
         return UUID.randomUUID().toString();
     }
 
     @Override
     public void onGranted(Context ctx) throws InterruptedException {
+        // TODO: If there will be some extra time, it could be nice to keep synchronized the
+        //  onGranted, onRevoked and isLeader functions
         this.leaderCtx = ctx;
         log.info(" {} leadership granted ", this.getId());
     }
@@ -39,6 +42,7 @@ public class CurrentLeadership implements Candidate {
         log.info(" {} leadership revoked ", this.getId());
     }
 
+    // TODO: May we check for different roles here?
     public boolean isLeader() {
         return this.leaderCtx != null && this.leaderCtx.isLeader();
     }

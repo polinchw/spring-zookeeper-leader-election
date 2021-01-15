@@ -20,6 +20,7 @@ public class ZookeeperLeaderElectionApplication {
 	@Value( "${gocl.test.leader.path}" )
 	private String leadershipPath;
 
+	// TODO: It could be nice to check with two beans having different leader role
 	@Bean
 	public LeaderInitiatorFactoryBean currentLeadershipLeaderInitiator(
 			CuratorFramework client, CurrentLeadership currentLeadership) {
