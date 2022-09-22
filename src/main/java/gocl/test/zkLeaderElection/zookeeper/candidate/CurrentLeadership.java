@@ -35,7 +35,6 @@ public class CurrentLeadership implements Candidate {
 
     @Override
     public void onGranted(Context ctx) throws InterruptedException {
-        // TODO: If there will be some extra time, it could be nice to keep synchronized the
         //  onGranted, onRevoked and isLeader functions
         this.leaderCtx = ctx;
         log.debug(" {} leadership granted ", this.getId());
@@ -47,7 +46,6 @@ public class CurrentLeadership implements Candidate {
         log.debug(" {} leadership revoked ", this.getId());
     }
 
-    // TODO: May we check for different roles here?
     public boolean isLeader() {
         return this.leaderCtx != null && this.leaderCtx.isLeader();
     }
