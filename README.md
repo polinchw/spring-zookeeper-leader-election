@@ -1,7 +1,7 @@
 # spring-zookeeper-leader-election
 
 ## Description
-Example of leader election pattern with Springboot and Zookeeper.
+Example of the leader election pattern with Springboot and Zookeeper.
 
 ## Dependencies
 
