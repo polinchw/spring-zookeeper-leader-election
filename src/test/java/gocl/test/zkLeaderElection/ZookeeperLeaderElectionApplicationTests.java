@@ -10,6 +10,8 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
+import gocl.ZookeeperLeaderElectionApplication;
+
 public class ZookeeperLeaderElectionApplicationTests {
 
     @Test

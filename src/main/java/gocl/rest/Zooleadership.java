@@ -1,10 +1,10 @@
-package gocl.test.zkLeaderElection.rest;
+package gocl.rest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import gocl.test.zkLeaderElection.zookeeper.candidate.CurrentLeadership;
+import gocl.zookeeper.candidate.CurrentLeadership;
 import lombok.extern.slf4j.Slf4j;
 
 @RestController

@@ -1,4 +1,4 @@
-package gocl.test.zkLeaderElection.zookeeper.candidate;
+package gocl.zookeeper.candidate;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;

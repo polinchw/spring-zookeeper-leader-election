@@ -1,6 +1,5 @@
-package gocl.test.zkLeaderElection;
+package gocl;
 
-import gocl.test.zkLeaderElection.zookeeper.candidate.CurrentLeadership;
 import org.apache.curator.framework.CuratorFramework;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
@@ -8,6 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.integration.zookeeper.config.LeaderInitiatorFactoryBean;
 import org.springframework.scheduling.annotation.EnableScheduling;
+
+import gocl.zookeeper.candidate.CurrentLeadership;
 
 @SpringBootApplication
 @EnableScheduling

@@ -1,10 +1,11 @@
-package gocl.test.zkLeaderElection.schedule;
+package gocl.schedule;
 
-import gocl.test.zkLeaderElection.zookeeper.candidate.CurrentLeadership;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 // import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
+
+import gocl.zookeeper.candidate.CurrentLeadership;
 
 @Slf4j
 @Component
