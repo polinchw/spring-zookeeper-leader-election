@@ -1,3 +1,12 @@
+## [0.2.1](https://github.com/polinchw/spring-zookeeper-leader-election/compare/v0.2.0...v0.2.1) (2022-09-23)
+
+
+### Bug Fixes
+
+* Add code analysis. ([57c0204](https://github.com/polinchw/spring-zookeeper-leader-election/commit/57c0204167fdca67fc3cb6bc6bb50ee02648ae7e))
+
+
+
 # [0.2.0](https://github.com/polinchw/spring-zookeeper-leader-election/compare/v0.1.1...v0.2.0) (2022-09-23)
 
 
