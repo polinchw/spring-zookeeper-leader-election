@@ -38,3 +38,10 @@ means it is not the leader.
 ```
 http://localhost:8080  
 ``` 
+
+## Github Actions
+
+Add the following to the Github settings for this repo:
+
++ DOCKER_USERNAME
++ DOCKER_PASSWORD
