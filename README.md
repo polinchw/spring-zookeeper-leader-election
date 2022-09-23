@@ -45,3 +45,4 @@ Add the following to the Github settings for this repo:
 
 + DOCKER_USERNAME
 + DOCKER_PASSWORD
++ CHANGELOG_RELEASE  (This is the github token.  It's used for updating the change log.)
