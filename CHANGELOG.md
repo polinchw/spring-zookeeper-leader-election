@@ -1,3 +1,12 @@
+# [0.2.0](https://github.com/polinchw/spring-zookeeper-leader-election/compare/v0.1.1...v0.2.0) (2022-09-23)
+
+
+### Features
+
+* Create a dependency on the test job. ([5e508e9](https://github.com/polinchw/spring-zookeeper-leader-election/commit/5e508e96705b739927efab5c3debabb7c73a7630))
+
+
+
 ## [0.1.1](https://github.com/polinchw/spring-zookeeper-leader-election/compare/v0.1.0...v0.1.1) (2022-09-23)
 
 
