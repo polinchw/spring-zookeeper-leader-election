@@ -1,4 +1,13 @@
-# 0.1.0 (2022-09-23)
+## [0.1.1](https://github.com/polinchw/spring-zookeeper-leader-election/compare/v0.1.0...v0.1.1) (2022-09-23)
+
+
+### Bug Fixes
+
+* Add maven test to the build pipeline. ([8a6bbfc](https://github.com/polinchw/spring-zookeeper-leader-election/commit/8a6bbfc9956d5922202b5265a3727aeb7bd734fe))
+
+
+
+# [0.1.0](https://github.com/polinchw/spring-zookeeper-leader-election/compare/dbb2e6691a8948f82c0dbc2d7bf637c6650975c8...v0.1.0) (2022-09-23)
 
 
 ### Bug Fixes
